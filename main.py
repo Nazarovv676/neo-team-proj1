@@ -1,5 +1,4 @@
 from src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand, save_data, load_data
-from src.address_book import AddressBook
 from src.contacts_bot import (
     parse_input,
     add_contact,
