@@ -1,4 +1,4 @@
-from src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand
+from src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand, save_data, load_data
 from src.address_book import AddressBook
 from src.contacts_bot import (
     parse_input,
@@ -16,7 +16,8 @@ def main():
     """
     This is a bot for saving, changing and reviewing phone contacts.
     """
-    book = AddressBook()
+    book = load_data()
+    print(book)
     print(MESSAGES["welcome"])
     print(MENU)
     while True:
@@ -25,6 +26,7 @@ def main():
             command, *args = parse_input(user_input)
 
             if command in ["close", "exit"]:
+                save_data(book)
                 print(MESSAGES["bye"])
                 break
 

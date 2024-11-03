@@ -7,6 +7,7 @@ from src.exceptions import (
     NoContactFound,
     input_error,
 )
+from src.data_storage import save_data, load_data
 
 __all__ = [
     "input_error",
@@ -18,4 +19,6 @@ __all__ = [
     "MENU",
     "ERROR_MESSAGES",
     "MESSAGES",
+    "save_data",
+    "load_data",
 ]
