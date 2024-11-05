@@ -1,3 +1,4 @@
+from tabulate import tabulate
 from src import (
     MESSAGES,
     input_error,
@@ -61,8 +62,10 @@ def show_all(book: AddressBook) -> str:
     if len(book) == 0:
         return MESSAGES["contacts_empty"]
     
-    records = book.find_all()
-    return '\n'.join(str(record) for record in records)
+    users = book.find_all()
+    table_data = [(user.name.value, str.join("\n", map(lambda phone: phone.value, user.phones))) for user in users]
+
+    return tabulate(table_data, headers=["Name", "Phones"], tablefmt="fancy_grid")
 
 
 @input_error
@@ -95,8 +98,9 @@ def show_upcoming_birthdays(book: AddressBook) -> str:
     birthdays = book.get_upcoming_birthdays()
     if not len(birthdays):
         return MESSAGES["upcoming_birthdays_empty"]
-    message_lst = [
-        f"""Name: {Fore.GREEN}{birthday["name"]}{Fore.RESET}, Congrats date: {Fore.CYAN}{birthday["congratulation_date"]}{Fore.RESET}"""
-        for birthday in birthdays
-    ]
-    return '\n'.join(message_lst)
+    
+    table_data = [(birthday["name"], birthday["congratulation_date"]) for birthday in birthdays]
+
+    return tabulate(
+        table_data, headers=["Name", "Congratulation date"], tablefmt="fancy_grid"
+    )
