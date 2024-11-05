@@ -41,7 +41,7 @@ def main():
                 case "phone":
                     print(show_phone(args, book))
                 case "all":
-                    show_all(book)
+                    print(show_all(book))
                 case "add-birthday":
                     print(add_birthday(args, book))
                 case "show-birthday":

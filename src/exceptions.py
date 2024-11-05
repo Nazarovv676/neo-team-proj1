@@ -1,3 +1,4 @@
+from functools import wraps
 from src.constants import ERROR_MESSAGES
 
 
@@ -22,6 +23,7 @@ class NoContactFound(Exception):
 
 
 def input_error(func):
+    @wraps(func)    
     def inner(*args, **kwargs):
         try:
             return func(*args, **kwargs)

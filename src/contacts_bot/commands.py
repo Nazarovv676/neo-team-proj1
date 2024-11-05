@@ -19,24 +19,25 @@ def parse_input(user_input: str):
 @input_error
 def add_contact(args: list, book: AddressBook) -> str:
     name, phone, *_ = args
-    capitalized_name = name.capitalize()
-    record = book.find(capitalized_name)
+    record = book.find(name)
     message = MESSAGES["contact_updated"]
 
     if record is None:
-        record = Record(capitalized_name)
+        record = Record(name)
+        record.add_phone(phone)
         book.add_record(record)
         message = MESSAGES["contact_added"]
-    if phone:
+    else:
         record.add_phone(phone)
+        # TODO: Add this message to the MESSAGES dictionary
+        message = "new phone added to contact"
     return message
 
 
 @input_error
 def change_contact(args: list, book: AddressBook) -> str:
     name, *phones = args
-    capitalized_name = name.capitalize()
-    record = book.find(capitalized_name)
+    record = book.find(name)
     if record is None:
         raise NoContactFound()
     record.edit_phone(phones[0], phones[1])
@@ -46,7 +47,7 @@ def change_contact(args: list, book: AddressBook) -> str:
 @input_error
 def show_phone(args: list, book: AddressBook) -> str:
     name, *_ = args
-    record = book.find(name.capitalize())
+    record = book.find(name)
     if record is None:
         raise NoContactFound()
     if not len(record.phones):
@@ -57,9 +58,11 @@ def show_phone(args: list, book: AddressBook) -> str:
 
 @input_error
 def show_all(book: AddressBook) -> str:
-    if not len(book.data.keys()):
+    if len(book) == 0:
         return MESSAGES["contacts_empty"]
-    [print(record) for record in book.data.keys()]
+    
+    records = book.find_all()
+    return '\n'.join(str(record) for record in records)
 
 
 @input_error
@@ -67,8 +70,7 @@ def add_birthday(args: list, book: AddressBook) -> str:
     if len(args) < 2:
         raise BirthdayException(ERROR_MESSAGES["name_and_birthday_missing"])
     name, birthday, *_ = args
-    capitalized_name = name.capitalize()
-    record = book.find(capitalized_name)
+    record = book.find(name)
     if record is None:
         raise NoContactFound()
     record.add_birthday(birthday)
@@ -78,7 +80,7 @@ def add_birthday(args: list, book: AddressBook) -> str:
 @input_error
 def show_birthday(args: list, book: AddressBook) -> str:
     name, *_ = args
-    record = book.find(name.capitalize())
+    record = book.find(name)
     if record is None:
         raise NoContactFound()
     return (
@@ -97,4 +99,4 @@ def show_upcoming_birthdays(book: AddressBook) -> str:
         f"""Name: {Fore.GREEN}{birthday["name"]}{Fore.RESET}, Congrats date: {Fore.CYAN}{birthday["congratulation_date"]}{Fore.RESET}"""
         for birthday in birthdays
     ]
-    return f"{'\n'.join(message_lst)}"
+    return '\n'.join(message_lst)
