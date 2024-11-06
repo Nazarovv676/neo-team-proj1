@@ -4,8 +4,8 @@ from colorama import Fore
 
 
 class Note():
-    def __init__(self, name: str, id: int):
-        self.id = Id(id)
+    def __init__(self, name: str):
+        self.id = Id()
         self.keywords = []
         self.tags = []
         self.name = Name(name)

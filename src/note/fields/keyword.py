@@ -6,6 +6,7 @@ class Keyword(Field):
     """
     Class for note's Kayword field
     """
+
     def __init__(self, keyword: str):
         super().__init__(keyword)
 
