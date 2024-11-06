@@ -1,4 +1,4 @@
-from src.address_book import Field
+from src.fields.field import Field
 from src import PhoneException, ERROR_MESSAGES
 import re
 

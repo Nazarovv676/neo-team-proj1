@@ -5,8 +5,12 @@ from datetime import datetime, timedelta
 
 
 class AddressBook(UserList):
+    _id = 0
+    
     def add_record(self, user: Record):
         """Adds a new user to the address book"""
+        user.add_id(self._id)
+        self._id += 1
         self.append(user)
 
     def update_record(self, user: Record) -> Record:
