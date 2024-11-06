@@ -23,7 +23,7 @@ class NoContactFound(Exception):
 
 
 def input_error(func):
-    @wraps(func)    
+    @wraps(func)
     def inner(*args, **kwargs):
         try:
             return func(*args, **kwargs)

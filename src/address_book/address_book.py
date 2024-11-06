@@ -1,9 +1,7 @@
 from collections import UserList
-from src import RecordNotFound, ERROR_MESSAGES
+from src import RecordNotFound
 from src.address_book import Record
 from datetime import datetime, timedelta
-
-from src.exceptions import BirthdayException
 
 
 class AddressBook(UserList):
