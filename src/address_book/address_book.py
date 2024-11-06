@@ -5,7 +5,6 @@ from datetime import datetime, timedelta
 
 
 class AddressBook(UserList):
-    # add id for each record using a class variable
     _id = 0
     
     def add_record(self, user: Record):
