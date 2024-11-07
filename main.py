@@ -1,4 +1,5 @@
 from src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand, save_data, load_data
+from src.autocomplete_input import prompt_input, Commands
 from src.contacts_bot import (
     parse_input,
     add_contact,
@@ -21,7 +22,7 @@ def main():
     print(MENU)
     while True:
         try:
-            user_input = input(MESSAGES["enter_command"])
+            user_input = prompt_input()
             command, *args = parse_input(user_input)
 
             if command in ["close", "exit"]:
@@ -30,23 +31,23 @@ def main():
                 break
 
             match command:
-                case "hello":
+                case Commands.HELLO.value:
                     print(MESSAGES["help_question"])
-                case "menu":
+                case Commands.MENU.value:
                     print(MENU)
-                case "add":
+                case Commands.ADD_CONTACT.value:
                     print(add_contact(args, book))
-                case "change":
+                case Commands.CHANGE_CONTACT.value:
                     print(change_contact(args, book))
-                case "phone":
+                case Commands.PHONE.value:
                     print(show_phone(args, book))
-                case "all":
+                case Commands.ALL.value:
                     print(show_all(book))
-                case "add-birthday":
+                case Commands.ADD_BIRTHDAY.value:
                     print(add_birthday(args, book))
-                case "show-birthday":
+                case Commands.SHOW_BIRTHDAY.value:
                     print(show_birthday(args, book))
-                case "birthdays":
+                case Commands.BIRTHDAYS.value:
                     print(show_upcoming_birthdays(book))
                 case _:
                     raise InvalidCommand(ERROR_MESSAGES["invalid_command"])

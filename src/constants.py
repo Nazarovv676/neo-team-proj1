@@ -31,7 +31,6 @@ ERROR_MESSAGES = {
 
 MESSAGES = {
     "welcome": f"{Fore.CYAN}Welcome to the assistant bot!",
-    "enter_command": f"{Fore.CYAN}Enter a command: {Fore.RESET}",
     "help_question": f"{Fore.GREEN}How can I help you?",
     "contact_added": f"{Fore.GREEN}Contact added.",
     "contact_updated": f"{Fore.GREEN}Contact updated.",
