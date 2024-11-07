@@ -1,4 +1,4 @@
-from src.note.note import Note
+from .note import Note
 from src.note.notes import Notes
 
 from src.note.fields.id import Id

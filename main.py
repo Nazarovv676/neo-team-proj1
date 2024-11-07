@@ -10,12 +10,16 @@ from src.contacts_bot import (
     show_upcoming_birthdays,
 )
 
+from src.note.commands.add_note import add_note
+from src.note import Note, Notes
+
 
 def main():
     """
     This is a bot for saving, changing and reviewing phone contacts.
     """
     book = load_data()
+    notebook = Notes()
     print(book)
     print(MESSAGES["welcome"])
     print(MENU)
@@ -48,6 +52,8 @@ def main():
                     print(show_birthday(args, book))
                 case "birthdays":
                     print(show_upcoming_birthdays(book))
+                case "note":
+                    add_note(args, notebook)
                 case _:
                     raise InvalidCommand(ERROR_MESSAGES["invalid_command"])
 
