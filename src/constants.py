@@ -10,8 +10,10 @@ Commands menu:
 #5 -{Fore.BLUE} add-birthday <name> <birthday date> {Fore.RESET} Add birthday, format DD.MM.YYYY
 #6 -{Fore.YELLOW} show-birthday <name> {Fore.RESET} Show birthday of the contact
 #7 -{Fore.WHITE} birthdays {Fore.RESET} Show upcoming birthday for 7 days
-#8 -{Fore.WHITE} all {Fore.RESET} Show all contacts
-#9 -{Fore.RED} close {Fore.RESET}/{Fore.RED} exit {Fore.RESET} Exit the Bot
+#8 -{Fore.BLUE} add-address <name> <address> {Fore.RESET} Add address
+#9 -{Fore.BLUE} add-email <name> <email> {Fore.RESET} Add email
+#10 -{Fore.WHITE} all {Fore.RESET} Show all contacts
+#11 -{Fore.RED} close {Fore.RESET}/{Fore.RED} exit {Fore.RESET} Exit the Bot
 """
 
 ERROR_MESSAGES = {
@@ -27,6 +29,7 @@ ERROR_MESSAGES = {
     "invalid_command": f"{Fore.RED}Invalid command!",
     "invalid_date_format": f"{Fore.RED}Invalid date format. Use DD.MM.YYYY",
     "record_not_found": f"{Fore.RED}The Record with this name not found.",
+    "email_invalid": f"{Fore.RED}The email should be in the format example@domain.com.",
 }
 
 MESSAGES = {
@@ -41,4 +44,6 @@ MESSAGES = {
     "no_birthday": f"{Fore.GREEN}No data",
     "upcoming_birthdays_empty": f"{Fore.GREEN}There are no upcoming birthdays",
     "bye": f"{Fore.GREEN}Good bye!",
+    "email_added": f"{Fore.GREEN}Email added.",
+    "address_added": f"{Fore.GREEN}Address added.",
 }

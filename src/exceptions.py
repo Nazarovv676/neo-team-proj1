@@ -10,6 +10,13 @@ class BirthdayException(Exception):
     pass
 
 
+class EmailException(Exception):
+    pass
+
+
+class AddressException(Exception):
+    pass
+
 class RecordNotFound(Exception):
     pass
 
@@ -42,5 +49,10 @@ def input_error(func):
             return e
         except RecordNotFound as e:
             return e
+        except EmailException as e:
+            return e
+        except AddressException as e:
+            return e
+            
 
     return inner

@@ -5,6 +5,8 @@ from .show_all import show_all
 from .add_birthday import add_birthday
 from .show_birthday import show_birthday
 from .show_upcoming_birthdays import show_upcoming_birthdays
+from .add_address import add_address
+from .add_email import add_email
 
 
 __all__ = [
@@ -15,4 +17,6 @@ __all__ = [
     "add_birthday",
     "show_birthday",
     "show_upcoming_birthdays",
+    "add_address",
+    "add_email",
 ]
