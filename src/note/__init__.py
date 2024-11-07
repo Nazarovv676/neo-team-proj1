@@ -1,15 +1,13 @@
 from .note import Note
+from .fields.keyword import Keyword
+from .fields.tag import Tag
+from src.address_book.fields.name import Name
 from src.note.notes import Notes
 
-from src.note.fields.id import Id
-from src.note.fields.keyword import Keyword
-from src.note.fields.tag import Tag
-from src.address_book.fields.name import Name
 
 __all__ = [
-    "Note",
     "Notes",
-    "Id",
+    "Note",
     "Keyword",
     "Tag",
     "Name"

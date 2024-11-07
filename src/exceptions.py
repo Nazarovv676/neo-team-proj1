@@ -21,6 +21,9 @@ class InvalidCommand(Exception):
 class NoContactFound(Exception):
     pass
 
+class NoNotesFound(Exception):
+    pass
+
 
 def input_error(func):
     @wraps(func)
@@ -36,6 +39,8 @@ def input_error(func):
             return ERROR_MESSAGES["no_contact"]
         except NoContactFound:
             return ERROR_MESSAGES["no_contact"]
+        except NoNotesFound:
+            return ERROR_MESSAGES["no-notes"]
         except PhoneException as e:
             return e
         except BirthdayException as e:

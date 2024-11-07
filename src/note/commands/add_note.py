@@ -1,21 +1,23 @@
 from src import (
     MESSAGES,
     input_error,
-    NoContactFound,
-    BirthdayException,
-    ERROR_MESSAGES,
 )
+from src.address_book.address_book import AddressBook
 from src.note import Notes, Note
-from colorama import Fore
 
 
 @input_error
-def add_note(args: list, notes: Notes) -> str:
-    name, description, *_ = args
-    capitalized_name = name.capitalize()
-    
-    note = Note(name, description)
+def add_note(args: list, book:AddressBook ,notes: Notes) -> str:
+    name, *description = args
+    message = MESSAGES["note_added"]
+    description_joined = ' '.join(description)
 
-    notes.add_note(note)
+    note = Note(name, description_joined)
 
-    print(list(lambda note: note, notes))
+    user = book.find(name)
+    if user is None:
+        message=MESSAGES["no_user_with_this_name"]
+    else: notes.add_note(note)
+
+
+    return message

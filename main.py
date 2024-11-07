@@ -1,4 +1,4 @@
-from src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand, save_data, load_data
+from src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand, save_data, load_data, save_notes, load_notes
 from src.contacts_bot import (
     parse_input,
     add_contact,
@@ -10,17 +10,14 @@ from src.contacts_bot import (
     show_upcoming_birthdays,
 )
 
-from src.note.commands.add_note import add_note
-from src.note import Note, Notes
-
+from src.note.commands import (add_note, show_notes, show_note, delete_note, edit_note)
 
 def main():
     """
     This is a bot for saving, changing and reviewing phone contacts.
     """
     book = load_data()
-    notebook = Notes()
-    print(book)
+    notebook = load_notes()
     print(MESSAGES["welcome"])
     print(MENU)
     while True:
@@ -30,6 +27,7 @@ def main():
 
             if command in ["close", "exit"]:
                 save_data(book)
+                save_notes(notebook)
                 print(MESSAGES["bye"])
                 break
 
@@ -52,8 +50,16 @@ def main():
                     print(show_birthday(args, book))
                 case "birthdays":
                     print(show_upcoming_birthdays(args, book))
-                case "note":
-                    add_note(args, notebook)
+                case "add-note":
+                    print(add_note(args, book,notebook))
+                case "show-notes":
+                    print(show_notes(notebook))
+                case "show-note":
+                    print(show_note(args, notebook))
+                case "delete-note":
+                    print(delete_note(args, notebook))
+                case "edit-note":
+                    print(edit_note(args, notebook))
                 case _:
                     raise InvalidCommand(ERROR_MESSAGES["invalid_command"])
 
