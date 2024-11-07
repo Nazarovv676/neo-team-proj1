@@ -1,6 +1,6 @@
 from prompt_toolkit import prompt
 from prompt_toolkit.completion import NestedCompleter
-from src.autocomplete_input.commands_enum import Commands
+from .commands_enum import Commands
 
 
 def prompt_input() -> str:

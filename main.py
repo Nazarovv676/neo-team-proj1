@@ -17,7 +17,6 @@ def main():
     This is a bot for saving, changing and reviewing phone contacts.
     """
     book = load_data()
-    print(book)
     print(MESSAGES["welcome"])
     print(MENU)
     while True:
