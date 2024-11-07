@@ -30,6 +30,7 @@ ERROR_MESSAGES = {
     "invalid_date_format": f"{Fore.RED}Invalid date format. Use DD.MM.YYYY",
     "record_not_found": f"{Fore.RED}The Record with this name not found.",
     "email_invalid": f"{Fore.RED}The email should be in the format example@domain.com.",
+    "name_and_address_missing": f"{Fore.RED}Give me name and address please.",
 }
 
 MESSAGES = {
