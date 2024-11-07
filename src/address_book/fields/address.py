@@ -1,4 +1,5 @@
-from src.address_book import Field
+from src.fields.field import Field
+
 
 class Address(Field):
     """

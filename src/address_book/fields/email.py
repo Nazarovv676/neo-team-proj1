@@ -1,7 +1,8 @@
 from datetime import datetime
-from src.address_book import Field
 from src import EmailException, ERROR_MESSAGES
 import re
+
+from src.fields.field import Field
 
 class Email(Field):
     """
