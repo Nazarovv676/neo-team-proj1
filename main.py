@@ -48,7 +48,7 @@ def main():
                 case Commands.SHOW_BIRTHDAY.value:
                     print(show_birthday(args, book))
                 case Commands.BIRTHDAYS.value:
-                    print(show_upcoming_birthdays(book))
+                    print(show_upcoming_birthdays(args, book))
                 case _:
                     raise InvalidCommand(ERROR_MESSAGES["invalid_command"])
 
