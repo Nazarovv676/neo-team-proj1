@@ -31,6 +31,7 @@ ERROR_MESSAGES = {
     "record_not_found": f"{Fore.RED}The Record with this name not found.",
     "email_invalid": f"{Fore.RED}The email should be in the format example@domain.com.",
     "name_and_address_missing": f"{Fore.RED}Give me name and address please.",
+    "name_and_email_missing": f"{Fore.RED}Give me name and email please.",
 }
 
 MESSAGES = {
