@@ -49,7 +49,7 @@ def main():
                 case "show-birthday":
                     print(show_birthday(args, book))
                 case "birthdays":
-                    print(show_upcoming_birthdays(book))
+                    print(show_upcoming_birthdays(args, book))
                 case "add-address":
                     print(add_address(args, book))
                 case "add-email":

@@ -5,8 +5,12 @@ from datetime import datetime, timedelta
 
 
 class AddressBook(UserList):
+    _id = 0
+    
     def add_record(self, user: Record):
         """Adds a new user to the address book"""
+        user.add_id(self._id)
+        self._id += 1
         self.append(user)
 
     def update_record(self, user: Record) -> Record:
@@ -31,7 +35,7 @@ class AddressBook(UserList):
     def add_birthday(self, name: str, birthday: str):
         self.find(name).add_birthday(birthday)
 
-    def get_upcoming_birthdays(self):
+    def get_upcoming_birthdays(self, max_days_ahead=7) -> list[dict]:
         """
         Get a list of upcoming birthdays within the next 7 days, including today.
 
@@ -56,7 +60,7 @@ class AddressBook(UserList):
             if birthday_this_year < today:
                 birthday_this_year = birthday_this_year.replace(year=today.year + 1)
 
-            if 0 <= (birthday_this_year - today).days <= 7:
+            if 0 <= (birthday_this_year - today).days <= max_days_ahead:
                 congratulation_date = birthday_this_year
 
                 if congratulation_date.weekday() == 5:  # Saturday
