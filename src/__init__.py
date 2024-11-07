@@ -1,5 +1,5 @@
-from src.constants import MENU, ERROR_MESSAGES, MESSAGES
-from src.exceptions import (
+from .constants import MENU, ERROR_MESSAGES, MESSAGES
+from .exceptions import (
     PhoneException,
     BirthdayException,
     RecordNotFound,
@@ -7,7 +7,7 @@ from src.exceptions import (
     NoContactFound,
     input_error,
 )
-from src.data_storage import save_data, load_data
+from .data_storage import save_data, load_data
 
 __all__ = [
     "input_error",

@@ -45,13 +45,13 @@ def main():
                 case "phone":
                     print(show_phone(args, book))
                 case "all":
-                    show_all(book)
+                    print(show_all(book))
                 case "add-birthday":
                     print(add_birthday(args, book))
                 case "show-birthday":
                     print(show_birthday(args, book))
                 case "birthdays":
-                    print(show_upcoming_birthdays(book))
+                    print(show_upcoming_birthdays(args, book))
                 case "note":
                     add_note(args, notebook)
                 case _:

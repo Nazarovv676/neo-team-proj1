@@ -1,5 +1,4 @@
-from src.contacts_bot.commands import (
-    parse_input,
+from .commands import (
     add_contact,
     change_contact,
     show_phone,
@@ -8,6 +7,7 @@ from src.contacts_bot.commands import (
     show_birthday,
     show_upcoming_birthdays,
 )
+from .command_parser import parse_input
 
 __all__ = [
     "parse_input",

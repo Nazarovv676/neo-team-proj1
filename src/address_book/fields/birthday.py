@@ -1,6 +1,6 @@
 from datetime import datetime
-from src.address_book import Field
 from src import ERROR_MESSAGES, BirthdayException
+from src.fields.field import Field
 
 
 class Birthday(Field):
