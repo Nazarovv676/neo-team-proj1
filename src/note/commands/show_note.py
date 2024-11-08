@@ -6,14 +6,15 @@ from src import (
 )
 from src.note import Notes
 
+
 @input_error
-def show_note(args, notebook: Notes)->str:
+def show_note(args, notebook: Notes) -> str:
     name, *_ = args
-    
+
     notes = notebook.find_note(name)
 
-    if len(notes)==0:
-        raise NoNotesFound()  
+    if len(notes) == 0:
+        raise NoNotesFound()
 
     table_data = [
         (note.id.value, note.name.value, note.description)
@@ -21,4 +22,3 @@ def show_note(args, notebook: Notes)->str:
     ]
 
     return tabulate(table_data, headers=["Id", "Name", "Note"], tablefmt="grid")
-

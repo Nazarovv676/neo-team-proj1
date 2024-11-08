@@ -11,7 +11,6 @@ class Notes(UserList):
 
     def add_note(self, note: Note):
         if note not in self.data:
-
             note.set_id(self._id)
             self._id += 1
             self.data.append(note)

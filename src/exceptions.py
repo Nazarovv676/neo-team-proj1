@@ -21,6 +21,7 @@ class InvalidCommand(Exception):
 class NoContactFound(Exception):
     pass
 
+
 class NoNotesFound(Exception):
     pass
 

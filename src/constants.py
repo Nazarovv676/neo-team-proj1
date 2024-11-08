@@ -50,7 +50,7 @@ MESSAGES = {
     "note_updated": f"{Fore.GREEN}Note added.",
     "note_added": f"{Fore.GREEN}Note updated.",
     "notes_empty": f"{Fore.GREEN}There are no notes exists.",
-    "no_user_with_this_name":f"{Fore.GREEN}No user found.",
-    "note_is_updates":f"{Fore.GREEN}Note is updated",
-    "note_deleted":f"{Fore.GREEN}Note is deleted",
+    "no_user_with_this_name": f"{Fore.GREEN}No user found.",
+    "note_is_updates": f"{Fore.GREEN}Note is updated",
+    "note_deleted": f"{Fore.GREEN}Note is deleted",
 }

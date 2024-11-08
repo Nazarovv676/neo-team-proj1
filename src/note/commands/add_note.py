@@ -7,7 +7,7 @@ from src.note import Notes, Note
 
 
 @input_error
-def add_note(args: list,notes: Notes) -> str:
+def add_note(args: list, notes: Notes) -> str:
     name, *description = args
     message = MESSAGES["note_added"]
     description_joined = ' '.join(description)
