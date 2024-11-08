@@ -16,10 +16,11 @@ def show_all(book: AddressBook) -> str:
         (
             user.name.value,
             str.join("\n", map(lambda phone: phone.value, user.phones)),
-            user.email.value if user.email else "No Email",
-            user.address.value if user.address else "No Address"
+            user.email.value if user.email else "-",
+            user.address.value if user.address else "-",
+            user.birthday.value if user.birthday else "-"
         )
         for user in users
     ]
 
-    return tabulate(table_data, headers=["Name", "Phones", "Email", "Address"], tablefmt="fancy_grid")
+    return tabulate(table_data, headers=["Name", "Phones", "Email", "Address", "Birthday"], tablefmt="fancy_grid")
