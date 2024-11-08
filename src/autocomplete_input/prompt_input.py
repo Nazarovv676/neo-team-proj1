@@ -18,7 +18,7 @@ def prompt_input() -> str:
             Commands.PHONE.value: {"<name>": None},
             Commands.ADD_BIRTHDAY.value: {"<name> <birthday>": None},
             Commands.SHOW_BIRTHDAY.value: {"<name>": None},
-            Commands.BIRTHDAYS.value: {"<name>": None},
+            Commands.BIRTHDAYS.value: {"<days> optional": None},
             Commands.ADD_ADDRESS.value: {"<name> <address>": None},
             Commands.ADD_EMAIL.value: {"<name> <email>": None},
             Commands.ALL.value: None,
