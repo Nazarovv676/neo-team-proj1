@@ -7,22 +7,14 @@ class Notes(UserList):
     """
     Class for the NotesList that stores and manages all notes
     """
-    ids = 0
-    first_open = True  # Атрибут класу для перевірки першого додавання
+    _id = 0
 
     def add_note(self, note: Note):
         if note not in self.data:
-            if len(self.data) == 0 and Notes.first_open:
-                current_id = 0
-            else:
-                current_id = self.data[-1].id.value + 1
 
-            note.set_id(current_id)
+            note.set_id(self._id)
+            self._id += 1
             self.data.append(note)
-
-            Notes.ids = current_id + 1
-
-            Notes.first_open = False
 
     def edit_note(self, current_note: Note) -> bool:
         counter = 0
@@ -50,7 +42,7 @@ class Notes(UserList):
         """Retrieves all users in the notebook."""
         return self.data
 
-    def delete(self, id:int) -> bool:
+    def delete(self, id: int) -> bool:
         current_note = None
         for note in self.data:
             if (note.id.value == id):

@@ -51,7 +51,7 @@ def main():
                 case "birthdays":
                     print(show_upcoming_birthdays(args, book))
                 case "add-note":
-                    print(add_note(args, book,notebook))
+                    print(add_note(args, notebook))
                 case "show-notes":
                     print(show_notes(notebook))
                 case "show-note":
