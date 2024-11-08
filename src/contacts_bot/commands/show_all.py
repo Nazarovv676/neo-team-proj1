@@ -13,8 +13,14 @@ def show_all(book: AddressBook) -> str:
 
     users = book.find_all()
     table_data = [
-        (user.name.value, str.join("\n", map(lambda phone: phone.value, user.phones)))
+        (
+            user.name.value,
+            str.join("\n", map(lambda phone: phone.value, user.phones)),
+            user.email.value if user.email else "-",
+            user.address.value if user.address else "-",
+            user.birthday.value if user.birthday else "-"
+        )
         for user in users
     ]
 
-    return tabulate(table_data, headers=["Name", "Phones"], tablefmt="fancy_grid")
+    return tabulate(table_data, headers=["Name", "Phones", "Email", "Address", "Birthday"], tablefmt="fancy_grid")

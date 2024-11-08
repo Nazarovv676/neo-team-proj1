@@ -1,4 +1,4 @@
-from src.address_book import Name, Phone, Birthday
+from src.address_book import Name, Phone, Birthday, Email, Address
 from src import PhoneException, ERROR_MESSAGES
 from colorama import Fore
 from src.fields.id import Id
@@ -13,6 +13,8 @@ class Record:
         self.name = Name(name)
         self.phones = []
         self.birthday = None
+        self.address = None
+        self.email = None
         self.id = None
 
     def __str__(self):
@@ -47,6 +49,12 @@ birthday: {Fore.CYAN}{self.birthday.format_birthday() if self.birthday else '-'}
 
     def add_birthday(self, birthday: str):
         self.birthday = Birthday(birthday)
+
+    def add_address(self, address: str):
+        self.address = Address(address)
+
+    def add_email(self, email: str):
+        self.email = Email(email)
         
     def add_id(self, id: int):
         self.id = Id(id)

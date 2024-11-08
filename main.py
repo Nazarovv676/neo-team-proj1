@@ -9,6 +9,8 @@ from src.contacts_bot import (
     add_birthday,
     show_birthday,
     show_upcoming_birthdays,
+    add_address,
+    add_email,
 )
 
 from src.note.commands import (add_note, show_notes, show_note, delete_note, edit_note)
@@ -52,6 +54,10 @@ def main():
                     print(show_birthday(args, book))
                 case "birthdays":
                     print(show_upcoming_birthdays(args, book))
+                case "add-address":
+                    print(add_address(args, book))
+                case "add-email":
+                    print(add_email(args, book))
                 case "add-note":
                     print(add_note(args, notebook))
                 case "show-notes":
