@@ -21,16 +21,16 @@ from src.bot import (
 )
 from src.notes import Notes
 
-address_book_filepath = "addressbook.pkl"
-notebook_filepath = "notebook.pkl"
+ADDRESS_BOOK_FILEPATH = "addressbook.pkl"
+NOTEBOOK_FILEPATH = "notebook.pkl"
 
 def main():
     """
     This is a bot for saving, changing and reviewing phone contacts.
     """
 
-    book = load_data(address_book_filepath, lambda: AddressBook())
-    notebook = load_data(notebook_filepath, lambda: Notes())
+    book = load_data(ADDRESS_BOOK_FILEPATH, lambda: AddressBook())
+    notebook = load_data(NOTEBOOK_FILEPATH, lambda: Notes())
     print(MESSAGES["welcome"])
     print(MENU)
     while True:
@@ -39,8 +39,8 @@ def main():
             command, *args = parse_input(user_input)
 
             if command in [Commands.CLOSE.value, Commands.EXIT.value]:
-                save_data(book, address_book_filepath)
-                save_data(notebook, notebook_filepath)
+                save_data(book, ADDRESS_BOOK_FILEPATH)
+                save_data(notebook, NOTEBOOK_FILEPATH)
                 print(MESSAGES["bye"])
                 break
 
