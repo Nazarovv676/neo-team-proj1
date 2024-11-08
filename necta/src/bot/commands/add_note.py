@@ -2,7 +2,6 @@ from src import (
     MESSAGES,
     input_error,
 )
-from src.contacts.address_book import AddressBook
 from src.notes import Notes, Note
 
 

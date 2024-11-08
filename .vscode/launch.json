@@ -8,7 +8,7 @@
             "name": "Bot",
             "type": "debugpy",
             "request": "launch",
-            "program": "package/main.py",
+            "program": "necta/main.py",
             "console": "integratedTerminal"
         }
     ]
