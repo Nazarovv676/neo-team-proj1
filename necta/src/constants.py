@@ -47,6 +47,7 @@ ERROR_MESSAGES = {
     "name_and_email_missing": f"{Fore.RED}Give me name and email please.",
     "name_missing": f"{Fore.RED}Give me name please.",
     "name_and_phone_missing": f"{Fore.RED}Give me name and phone please.",
+    "invalid_input_id_value": f"{Fore.RED}Id must be an integer.",
 }
 
 MESSAGES = {
@@ -70,4 +71,6 @@ MESSAGES = {
     "note_deleted": f"{Fore.GREEN}Note is deleted",
     "email_added": f"{Fore.GREEN}Email added.",
     "address_added": f"{Fore.GREEN}Address added.",
+    "clarify_contact": f"{Fore.BLUE}What contact do you mean?{Fore.RESET}",
+    "enter_contact_id": f"{Fore.GREEN}Enter the appropriate contact number or {Fore.RED}cancel{Fore.RESET}:",
 }
