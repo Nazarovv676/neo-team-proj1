@@ -5,6 +5,7 @@ class Commands(Enum):
     HELLO = "hello"
     MENU = "menu"
     ADD_CONTACT = "add"
+    ADD_PHONE = "add-phone"
     CHANGE_CONTACT = "change"
     PHONE = "phone"
     ALL = "all"
