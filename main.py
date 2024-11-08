@@ -29,7 +29,7 @@ def main():
 
             if command in ["close", "exit"]:
                 save_data(book)
-                save_notes(notebook)
+                save_data(notebook)
                 print(MESSAGES["bye"])
                 break
 
