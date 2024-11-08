@@ -1,4 +1,4 @@
-from src.address_book import Name, Phone, Birthday, Email, Address
+from src.contacts import Name, Phone, Birthday, Email, Address
 from src import PhoneException, ERROR_MESSAGES
 from colorama import Fore
 from src.fields.id import Id

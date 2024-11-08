@@ -5,7 +5,7 @@ from src import (
     NoContactFound,
     EmailException,
 )
-from src.address_book import AddressBook
+from src.contacts import AddressBook
 
 @input_error
 def add_email(args: list, book: AddressBook) -> str:

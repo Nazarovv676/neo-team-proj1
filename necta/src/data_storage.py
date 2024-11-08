@@ -1,6 +1,6 @@
 import pickle
-from src.address_book import AddressBook
-from src.note.notes import Notes
+from src.contacts import AddressBook
+from src.notes.notes import Notes
 
 
 def save_data(book, filename):

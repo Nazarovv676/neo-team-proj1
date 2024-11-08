@@ -2,7 +2,7 @@ from src import (
     MESSAGES,
     input_error,
 )
-from src.address_book import AddressBook, Record
+from src.contacts import AddressBook, Record
 
 
 @input_error
