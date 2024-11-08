@@ -18,6 +18,5 @@ def add_contact(args: list, book: AddressBook) -> str:
         message = MESSAGES["contact_added"]
     else:
         record.add_phone(phone)
-        # TODO: Add this message to the MESSAGES dictionary
-        message = "new phone added to contact"
+        message = MESSAGES["phone_added"]
     return message
