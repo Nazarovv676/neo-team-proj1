@@ -31,7 +31,7 @@ def main():
             user_input = prompt_input()
             command, *args = parse_input(user_input)
 
-            if command in ["close", "exit"]:
+            if command in [Commands.CLOSE.value, Commands.EXIT.value]:
                 save_data(book, "addressbook.pkl")
                 save_data(notebook, "notebook.pkl")
                 print(MESSAGES["bye"])
@@ -56,19 +56,19 @@ def main():
                     print(show_birthday(args, book))
                 case Commands.BIRTHDAYS.value:
                     print(show_upcoming_birthdays(args, book))
-                case "add-address":
+                case Commands.ADD_ADDRESS.value:
                     print(add_address(args, book))
-                case "add-email":
+                case Commands.ADD_EMAIL.value:
                     print(add_email(args, book))
-                case "add-note":
+                case Commands.ADD_NOTE.value:
                     print(add_note(args, notebook))
-                case "show-notes":
+                case Commands.SHOW_NOTES.value:
                     print(show_notes(notebook))
-                case "show-note":
+                case Commands.SHOW_NOTE.value:
                     print(show_note(args, notebook))
-                case "delete-note":
+                case Commands.DELETE_NOTE.value:
                     print(delete_note(args, notebook))
-                case "edit-note":
+                case Commands.EDIT_NOTE.value:
                     print(edit_note(args, notebook))
                 case _:
                     raise InvalidCommand(ERROR_MESSAGES["invalid_command"])

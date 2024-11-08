@@ -38,8 +38,7 @@ def input_error(func):
     def inner(*args, **kwargs):
         try:
             return func(*args, **kwargs)
-        except ValueError as e:
-            print(e)
+        except ValueError:
             return ERROR_MESSAGES["phone_and_number_missing"]
         except IndexError:
             return ERROR_MESSAGES["phone_missing"]

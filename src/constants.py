@@ -4,6 +4,8 @@ MENU = f"""{Fore.RESET}
 Commands menu:
 
 #1 -{Fore.LIGHTBLACK_EX} hello {Fore.RESET} Say hello to the Bot
+
+{Fore.CYAN}---Contacts---{Fore.RESET}
 #2 -{Fore.BLUE} add <name> <phone> {Fore.RESET} Add new contact
 #3 -{Fore.GREEN} change <name> <phone to change> <new phone> {Fore.RESET} Change contact
 #4 -{Fore.YELLOW} phone <name> {Fore.RESET} Show phone of the contact
@@ -13,6 +15,8 @@ Commands menu:
 #8 -{Fore.BLUE} add-address <name> <address> {Fore.RESET} Add address
 #9 -{Fore.BLUE} add-email <name> <email> {Fore.RESET} Add email
 #10 -{Fore.WHITE} all {Fore.RESET} Show all contacts
+
+{Fore.CYAN}---Notes---{Fore.RESET}
 #11 -{Fore.YELLOW} add-note <name> <description> {Fore.RESET} Add the note
 #12 -{Fore.GREEN} show-notes {Fore.RESET} Show all notes
 #13 -{Fore.LIGHTBLUE_EX} show-note <name> {Fore.RESET} Show all notes for the contact
@@ -45,6 +49,7 @@ MESSAGES = {
     "welcome": f"{Fore.CYAN}Welcome to the assistant bot!",
     "help_question": f"{Fore.GREEN}How can I help you?",
     "contact_added": f"{Fore.GREEN}Contact added.",
+    "phone_added": f"{Fore.GREEN}New phone added to contact.",
     "contact_updated": f"{Fore.GREEN}Contact updated.",
     "contacts_empty": f"{Fore.GREEN}There are no contacts exists.",
     "no_phone_exists": f"{Fore.GREEN}No phone exists.",

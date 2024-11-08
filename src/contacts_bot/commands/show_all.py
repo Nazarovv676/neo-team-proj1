@@ -18,7 +18,7 @@ def show_all(book: AddressBook) -> str:
             str.join("\n", map(lambda phone: phone.value, user.phones)),
             user.email.value if user.email else "-",
             user.address.value if user.address else "-",
-            user.birthday.value if user.birthday else "-"
+            user.birthday.format_birthday() if user.birthday else "-"
         )
         for user in users
     ]
