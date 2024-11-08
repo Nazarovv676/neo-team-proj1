@@ -6,6 +6,7 @@ from .exceptions import (
     InvalidCommand,
     NoContactFound,
     input_error,
+    NoNotesFound,
     EmailException,
     AddressException,
 )
@@ -23,6 +24,7 @@ __all__ = [
     "MESSAGES",
     "save_data",
     "load_data",
+    "NoNotesFound"
     "EmailException",
     "AddressException",
 ]
