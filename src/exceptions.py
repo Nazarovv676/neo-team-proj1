@@ -56,7 +56,7 @@ def input_error(func):
             return e
         except BirthdayException as e:
             return e
-        except RecordNotFound as e:
+        except RecordNotFound:
             return ERROR_MESSAGES["record_not_found"]
         except EmailException as e:
             return e
