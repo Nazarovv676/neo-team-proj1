@@ -14,16 +14,17 @@ Commands menu:
 #7 -{Fore.WHITE} birthdays {Fore.RESET} Show upcoming birthday for 7 days
 #8 -{Fore.BLUE} add-address <name> <address> {Fore.RESET} Add address
 #9 -{Fore.BLUE} add-email <name> <email> {Fore.RESET} Add email
-#10 -{Fore.WHITE} all {Fore.RESET} Show all contacts
+#10 -{Fore.RED} delete-contact <name> {Fore.RESET} Delete contact
+#11 -{Fore.WHITE} all {Fore.RESET} Show all contacts
 
 {Fore.CYAN}---Notes---{Fore.RESET}
-#11 -{Fore.YELLOW} add-note <name> <description> {Fore.RESET} Add the note
-#12 -{Fore.GREEN} show-notes {Fore.RESET} Show all notes
-#13 -{Fore.LIGHTBLUE_EX} show-note <name> {Fore.RESET} Show all notes for the contact
-#14 -{Fore.BLUE} delete-note <id> {Fore.RESET} Delete note with id
-#15 -{Fore.MAGENTA} edit-note <id> <new description> {Fore.RESET} Edit note with id
+#12 -{Fore.YELLOW} add-note <name> <description> {Fore.RESET} Add the note
+#13 -{Fore.GREEN} show-notes {Fore.RESET} Show all notes
+#14 -{Fore.LIGHTBLUE_EX} show-note <name> {Fore.RESET} Show all notes for the contact
+#15 -{Fore.BLUE} delete-note <id> {Fore.RESET} Delete note with id
+#16 -{Fore.MAGENTA} edit-note <id> <new description> {Fore.RESET} Edit note with id
 
-#16 -{Fore.RED} close {Fore.RESET}/{Fore.RED} exit {Fore.RESET} Exit the Bot
+#17 -{Fore.RED} close {Fore.RESET}/{Fore.RED} exit {Fore.RESET} Exit the Bot
 """
 
 ERROR_MESSAGES = {
@@ -43,6 +44,7 @@ ERROR_MESSAGES = {
     "email_invalid": f"{Fore.RED}The email should be in the format example@domain.com.",
     "name_and_address_missing": f"{Fore.RED}Give me name and address please.",
     "name_and_email_missing": f"{Fore.RED}Give me name and email please.",
+    "name_missing": f"{Fore.RED}Give me name please.",
 }
 
 MESSAGES = {
@@ -51,6 +53,7 @@ MESSAGES = {
     "contact_added": f"{Fore.GREEN}Contact added.",
     "phone_added": f"{Fore.GREEN}New phone added to contact.",
     "contact_updated": f"{Fore.GREEN}Contact updated.",
+    "contact_deleted": f"{Fore.GREEN}Contact deleted.",
     "contacts_empty": f"{Fore.GREEN}There are no contacts exists.",
     "no_phone_exists": f"{Fore.GREEN}No phone exists.",
     "birthday_added": f"{Fore.GREEN}Birthday added.",

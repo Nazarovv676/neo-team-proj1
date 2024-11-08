@@ -27,6 +27,7 @@ def prompt_input() -> str:
             Commands.SHOW_NOTE.value: {"<name>": None},
             Commands.DELETE_NOTE.value: {"<id>": None},
             Commands.EDIT_NOTE.value: {"<id> <new description>": None},
+            Commands.DELETE_CONTACT.value: {"<name>": None},
             Commands.CLOSE.value: None,
             Commands.EXIT.value: None,
         }

@@ -12,6 +12,7 @@ from src.contacts_bot import (
     show_upcoming_birthdays,
     add_address,
     add_email,
+    delete_contact,
 )
 
 from src.note.commands import (add_note, show_notes, show_note, delete_note, edit_note)
@@ -70,6 +71,8 @@ def main():
                     print(delete_note(args, notebook))
                 case Commands.EDIT_NOTE.value:
                     print(edit_note(args, notebook))
+                case Commands.DELETE_CONTACT.value:
+                    print(delete_contact(args, book))
                 case _:
                     raise InvalidCommand(ERROR_MESSAGES["invalid_command"])
 

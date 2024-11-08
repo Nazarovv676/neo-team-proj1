@@ -8,6 +8,8 @@ from .commands import (
     show_upcoming_birthdays,
     add_address,
     add_email,
+    delete_contact,
+    
 )
 from .command_parser import parse_input
 
@@ -22,4 +24,5 @@ __all__ = [
     "show_upcoming_birthdays",
     "add_address",
     "add_email",
+    "delete_contact"
 ]

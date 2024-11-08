@@ -9,6 +9,7 @@ from .exceptions import (
     NoNotesFound,
     EmailException,
     AddressException,
+    NameException,
 )
 from .data_storage import save_data, load_data
 
@@ -27,4 +28,5 @@ __all__ = [
     "NoNotesFound"
     "EmailException",
     "AddressException",
+    "NameException",
 ]
