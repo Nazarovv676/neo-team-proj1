@@ -6,7 +6,7 @@ from .exceptions import (
     InvalidCommand,
     NoContactFound,
     input_error,
-    NoNotesFound
+    NoNotesFound,
     EmailException,
     AddressException,
 )

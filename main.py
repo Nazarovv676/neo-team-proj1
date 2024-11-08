@@ -30,8 +30,8 @@ def main():
             command, *args = parse_input(user_input)
 
             if command in ["close", "exit"]:
-                save_data(book)
-                save_data(notebook)
+                save_data(book, "addressbook.pkl")
+                save_data(notebook, "notebook.pkl")
                 print(MESSAGES["bye"])
                 break
 
