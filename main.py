@@ -8,6 +8,8 @@ from src.contacts_bot import (
     add_birthday,
     show_birthday,
     show_upcoming_birthdays,
+    add_address,
+    add_email,
 )
 
 
@@ -48,6 +50,10 @@ def main():
                     print(show_birthday(args, book))
                 case "birthdays":
                     print(show_upcoming_birthdays(args, book))
+                case "add-address":
+                    print(add_address(args, book))
+                case "add-email":
+                    print(add_email(args, book))
                 case _:
                     raise InvalidCommand(ERROR_MESSAGES["invalid_command"])
 
