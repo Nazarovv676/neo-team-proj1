@@ -1,4 +1,4 @@
-# Contacts and Notes Bot
+# Necta
 
 This is a bot for saving, changing, and reviewing phone contacts and notes. The bot supports various commands to manage contacts and notes efficiently.
 

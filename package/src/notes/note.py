@@ -1,7 +1,7 @@
-from src.address_book import Name
+from src.contacts import Name
 from src.fields.id import Id
-from src.note.fields.keyword import Keyword
-from src.note.fields.tag import Tag
+from src.notes.fields.keyword import Keyword
+from src.notes.fields.tag import Tag
 from colorama import Fore
 
 

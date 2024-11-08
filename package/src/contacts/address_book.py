@@ -1,6 +1,6 @@
 from collections import UserList
 from src import RecordNotFound
-from src.address_book import Record
+from src.contacts import Record
 from datetime import datetime, timedelta
 
 

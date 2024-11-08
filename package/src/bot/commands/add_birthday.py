@@ -5,7 +5,7 @@ from src import (
     BirthdayException,
     ERROR_MESSAGES,
 )
-from src.address_book import AddressBook
+from src.contacts import AddressBook
 
 
 @input_error

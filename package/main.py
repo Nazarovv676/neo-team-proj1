@@ -1,7 +1,7 @@
 from src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand, save_data, load_data
-from src.address_book import AddressBook
-from src.autocomplete_input import prompt_input, Commands
-from src.contacts_bot import (
+from src.contacts import AddressBook
+from src.autocomplete import prompt_input, Commands
+from src.bot import (
     parse_input,
     add_contact,
     change_contact,
@@ -13,18 +13,24 @@ from src.contacts_bot import (
     add_address,
     add_email,
     delete_contact,
+    add_note,
+    show_notes,
+    show_note,
+    delete_note,
+    edit_note,
 )
+from src.notes import Notes
 
-from src.note.commands import (add_note, show_notes, show_note, delete_note, edit_note)
-from src.note import Notes
+address_book_filepath = "addressbook.pkl"
+notebook_filepath = "notebook.pkl"
 
 def main():
     """
     This is a bot for saving, changing and reviewing phone contacts.
     """
 
-    book = load_data("addressbook.pkl", lambda: AddressBook())
-    notebook = load_data("notebook.pkl", lambda: Notes())
+    book = load_data(address_book_filepath, lambda: AddressBook())
+    notebook = load_data(notebook_filepath, lambda: Notes())
     print(MESSAGES["welcome"])
     print(MENU)
     while True:
@@ -33,8 +39,8 @@ def main():
             command, *args = parse_input(user_input)
 
             if command in [Commands.CLOSE.value, Commands.EXIT.value]:
-                save_data(book, "addressbook.pkl")
-                save_data(notebook, "notebook.pkl")
+                save_data(book, address_book_filepath)
+                save_data(notebook, notebook_filepath)
                 print(MESSAGES["bye"])
                 break
 

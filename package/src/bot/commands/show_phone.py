@@ -3,7 +3,7 @@ from src import (
     input_error,
     NoContactFound,
 )
-from src.address_book import AddressBook
+from src.contacts import AddressBook
 from colorama import Fore
 
 

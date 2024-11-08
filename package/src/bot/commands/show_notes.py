@@ -3,7 +3,7 @@ from src import (
     MESSAGES,
     input_error,
 )
-from src.note import Notes
+from src.notes import Notes
 
 
 @input_error

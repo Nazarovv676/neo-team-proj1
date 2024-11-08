@@ -8,7 +8,11 @@ from .show_upcoming_birthdays import show_upcoming_birthdays
 from .add_address import add_address
 from .add_email import add_email
 from .delete_contact import delete_contact
-
+from .add_note import add_note
+from .show_notes import show_notes
+from .show_note import show_note
+from .delete_note import delete_note
+from .edit_note import edit_note
 
 __all__ = [
     "add_contact",
@@ -20,5 +24,10 @@ __all__ = [
     "show_upcoming_birthdays",
     "add_address",
     "add_email",
-    "delete_contact"
+    "delete_contact",
+    "add_note",
+    "show_notes",
+    "show_note",
+    "delete_note",
+    "edit_note"
 ]

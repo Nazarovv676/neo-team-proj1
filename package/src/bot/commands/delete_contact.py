@@ -5,7 +5,7 @@ from src import (
     NoContactFound,
     NameException,
 )
-from src.address_book import AddressBook
+from src.contacts import AddressBook
 
 @input_error
 def delete_contact(args: list, book: AddressBook) -> str:
