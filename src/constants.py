@@ -11,7 +11,7 @@ Commands menu:
 #4 -{Fore.YELLOW} phone <name> {Fore.RESET} Show phone of the contact
 #5 -{Fore.BLUE} add-birthday <name> <birthday date> {Fore.RESET} Add birthday, format DD.MM.YYYY
 #6 -{Fore.YELLOW} show-birthday <name> {Fore.RESET} Show birthday of the contact
-#7 -{Fore.WHITE} birthdays {Fore.RESET} Show upcoming birthday for 7 days
+#7 -{Fore.WHITE} birthdays <days> {Fore.RESET} Show upcoming birthday for given days (default 7)
 #8 -{Fore.BLUE} add-address <name> <address> {Fore.RESET} Add address
 #9 -{Fore.BLUE} add-email <name> <email> {Fore.RESET} Add email
 #10 -{Fore.RED} delete-contact <name> {Fore.RESET} Delete contact
