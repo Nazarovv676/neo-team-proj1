@@ -6,6 +6,8 @@ from .commands import (
     add_birthday,
     show_birthday,
     show_upcoming_birthdays,
+    add_address,
+    add_email,
 )
 from .command_parser import parse_input
 
@@ -18,4 +20,6 @@ __all__ = [
     "add_birthday",
     "show_birthday",
     "show_upcoming_birthdays",
+    "add_address",
+    "add_email",
 ]

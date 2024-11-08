@@ -1,4 +1,5 @@
 from src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand, save_data, load_data
+from src.address_book import AddressBook
 from src.autocomplete_input import prompt_input, Commands
 from src.contacts_bot import (
     parse_input,
@@ -9,14 +10,20 @@ from src.contacts_bot import (
     add_birthday,
     show_birthday,
     show_upcoming_birthdays,
+    add_address,
+    add_email,
 )
 
+from src.note.commands import (add_note, show_notes, show_note, delete_note, edit_note)
+from src.note import Notes
 
 def main():
     """
     This is a bot for saving, changing and reviewing phone contacts.
     """
-    book = load_data()
+
+    book = load_data("addressbook.pkl", lambda: AddressBook())
+    notebook = load_data("notebook.pkl", lambda: Notes())
     print(MESSAGES["welcome"])
     print(MENU)
     while True:
@@ -25,7 +32,8 @@ def main():
             command, *args = parse_input(user_input)
 
             if command in ["close", "exit"]:
-                save_data(book)
+                save_data(book, "addressbook.pkl")
+                save_data(notebook, "notebook.pkl")
                 print(MESSAGES["bye"])
                 break
 
@@ -48,6 +56,20 @@ def main():
                     print(show_birthday(args, book))
                 case Commands.BIRTHDAYS.value:
                     print(show_upcoming_birthdays(args, book))
+                case "add-address":
+                    print(add_address(args, book))
+                case "add-email":
+                    print(add_email(args, book))
+                case "add-note":
+                    print(add_note(args, notebook))
+                case "show-notes":
+                    print(show_notes(notebook))
+                case "show-note":
+                    print(show_note(args, notebook))
+                case "delete-note":
+                    print(delete_note(args, notebook))
+                case "edit-note":
+                    print(edit_note(args, notebook))
                 case _:
                     raise InvalidCommand(ERROR_MESSAGES["invalid_command"])
 

@@ -10,6 +10,13 @@ class BirthdayException(Exception):
     pass
 
 
+class EmailException(Exception):
+    pass
+
+
+class AddressException(Exception):
+    pass
+
 class RecordNotFound(Exception):
     pass
 
@@ -19,6 +26,10 @@ class InvalidCommand(Exception):
 
 
 class NoContactFound(Exception):
+    pass
+
+
+class NoNotesFound(Exception):
     pass
 
 
@@ -36,11 +47,18 @@ def input_error(func):
             return ERROR_MESSAGES["no_contact"]
         except NoContactFound:
             return ERROR_MESSAGES["no_contact"]
+        except NoNotesFound:
+            return ERROR_MESSAGES["no-notes"]
         except PhoneException as e:
             return e
         except BirthdayException as e:
             return e
         except RecordNotFound as e:
             return e
+        except EmailException as e:
+            return e
+        except AddressException as e:
+            return e
+            
 
     return inner
