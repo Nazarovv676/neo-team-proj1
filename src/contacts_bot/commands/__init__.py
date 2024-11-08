@@ -7,6 +7,7 @@ from .show_birthday import show_birthday
 from .show_upcoming_birthdays import show_upcoming_birthdays
 from .add_address import add_address
 from .add_email import add_email
+from .delete_contact import delete_contact
 
 
 __all__ = [
@@ -19,4 +20,5 @@ __all__ = [
     "show_upcoming_birthdays",
     "add_address",
     "add_email",
+    "delete_contact"
 ]
