@@ -8,7 +8,7 @@ from .exceptions import (
     input_error,
     NoNotesFound
 )
-from .data_storage import save_data, load_data, load_notes, save_notes
+from .data_storage import save_data, load_data
 
 __all__ = [
     "input_error",
@@ -22,7 +22,5 @@ __all__ = [
     "MESSAGES",
     "save_data",
     "load_data",
-    "load_notes",
-    "save_notes",
     "NoNotesFound"
 ]

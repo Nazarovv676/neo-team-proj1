@@ -1,4 +1,5 @@
-from src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand, save_data, load_data, save_notes, load_notes
+from src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand, save_data, load_data
+from src.address_book import AddressBook
 from src.contacts_bot import (
     parse_input,
     add_contact,
@@ -11,13 +12,14 @@ from src.contacts_bot import (
 )
 
 from src.note.commands import (add_note, show_notes, show_note, delete_note, edit_note)
+from src.note import Notes
 
 def main():
     """
     This is a bot for saving, changing and reviewing phone contacts.
     """
-    book = load_data()
-    notebook = load_notes()
+    book = load_data("addressbook.pkl", lambda: AddressBook())
+    notebook = load_data("notebook.pkl", lambda: Notes())
     print(MESSAGES["welcome"])
     print(MENU)
     while True:
