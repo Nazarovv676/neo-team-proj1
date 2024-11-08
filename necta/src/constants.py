@@ -7,24 +7,25 @@ Commands menu:
 
 {Fore.CYAN}---Contacts---{Fore.RESET}
 #2 -{Fore.BLUE} add <name> <phone> {Fore.RESET} Add new contact
-#3 -{Fore.GREEN} change <name> <phone to change> <new phone> {Fore.RESET} Change contact
-#4 -{Fore.YELLOW} phone <name> {Fore.RESET} Show phone of the contact
-#5 -{Fore.BLUE} add-birthday <name> <birthday date> {Fore.RESET} Add birthday, format DD.MM.YYYY
-#6 -{Fore.YELLOW} show-birthday <name> {Fore.RESET} Show birthday of the contact
-#7 -{Fore.WHITE} birthdays <days> {Fore.RESET} Show upcoming birthday for given days (default 7)
-#8 -{Fore.BLUE} add-address <name> <address> {Fore.RESET} Add address
-#9 -{Fore.BLUE} add-email <name> <email> {Fore.RESET} Add email
-#10 -{Fore.RED} delete-contact <name> {Fore.RESET} Delete contact
-#11 -{Fore.WHITE} all {Fore.RESET} Show all contacts
+#3 -{Fore.BLUE} add-phone <name> <phone> {Fore.RESET} Add phone to contact
+#4 -{Fore.GREEN} change <name> <phone to change> <new phone> {Fore.RESET} Change contact
+#5 -{Fore.YELLOW} phone <name> {Fore.RESET} Show phone of the contact
+#6 -{Fore.BLUE} add-birthday <name> <birthday date> {Fore.RESET} Add birthday, format DD.MM.YYYY
+#7 -{Fore.YELLOW} show-birthday <name> {Fore.RESET} Show birthday of the contact
+#8 -{Fore.WHITE} birthdays <days> {Fore.RESET} Show upcoming birthday for given days (default 7)
+#9 -{Fore.BLUE} add-address <name> <address> {Fore.RESET} Add address
+#10 -{Fore.BLUE} add-email <name> <email> {Fore.RESET} Add email
+#11 -{Fore.RED} delete-contact <name> {Fore.RESET} Delete contact
+#12 -{Fore.WHITE} all {Fore.RESET} Show all contacts
 
 {Fore.CYAN}---Notes---{Fore.RESET}
-#12 -{Fore.YELLOW} add-note <name> <description> {Fore.RESET} Add the note
-#13 -{Fore.GREEN} show-notes {Fore.RESET} Show all notes
-#14 -{Fore.LIGHTBLUE_EX} show-note <name> {Fore.RESET} Show all notes for the contact
-#15 -{Fore.BLUE} delete-note <id> {Fore.RESET} Delete note with id
-#16 -{Fore.MAGENTA} edit-note <id> <new description> {Fore.RESET} Edit note with id
+#13 -{Fore.YELLOW} add-note <name> <description> {Fore.RESET} Add the note
+#14 -{Fore.GREEN} show-notes {Fore.RESET} Show all notes
+#15 -{Fore.LIGHTBLUE_EX} show-note <name> {Fore.RESET} Show all notes for the contact
+#16 -{Fore.BLUE} delete-note <id> {Fore.RESET} Delete note with id
+#17 -{Fore.MAGENTA} edit-note <id> <new description> {Fore.RESET} Edit note with id
 
-#17 -{Fore.RED} close {Fore.RESET}/{Fore.RED} exit {Fore.RESET} Exit the Bot
+#18 -{Fore.RED} close {Fore.RESET}/{Fore.RED} exit {Fore.RESET} Exit the Bot
 """
 
 ERROR_MESSAGES = {
@@ -45,6 +46,7 @@ ERROR_MESSAGES = {
     "name_and_address_missing": f"{Fore.RED}Give me name and address please.",
     "name_and_email_missing": f"{Fore.RED}Give me name and email please.",
     "name_missing": f"{Fore.RED}Give me name please.",
+    "name_and_phone_missing": f"{Fore.RED}Give me name and phone please.",
 }
 
 MESSAGES = {

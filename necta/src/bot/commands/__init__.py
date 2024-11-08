@@ -13,6 +13,7 @@ from .show_notes import show_notes
 from .show_note import show_note
 from .delete_note import delete_note
 from .edit_note import edit_note
+from .add_phone import add_phone
 
 __all__ = [
     "add_contact",
@@ -29,5 +30,6 @@ __all__ = [
     "show_notes",
     "show_note",
     "delete_note",
-    "edit_note"
+    "edit_note",
+    "add_phone"
 ]

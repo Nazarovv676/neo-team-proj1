@@ -18,6 +18,7 @@ from src.bot import (
     show_note,
     delete_note,
     edit_note,
+    add_phone
 )
 from src.notes import Notes
 
@@ -51,6 +52,8 @@ def main():
                     print(MENU)
                 case Commands.ADD_CONTACT.value:
                     print(add_contact(args, book))
+                case Commands.ADD_PHONE.value:
+                    print(add_phone(args, book))
                 case Commands.CHANGE_CONTACT.value:
                     print(change_contact(args, book))
                 case Commands.PHONE.value:

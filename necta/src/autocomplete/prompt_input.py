@@ -12,6 +12,7 @@ def prompt_input() -> str:
         {
             Commands.HELLO.value: None,
             Commands.ADD_CONTACT.value: {"<name> <phone>": None},
+            Commands.ADD_PHONE.value: {"<name> <phone>": None},
             Commands.CHANGE_CONTACT.value: {
                 "<name> <phone to change> <new phone>": None
             },
