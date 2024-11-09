@@ -36,6 +36,9 @@ class NoContactFound(Exception):
 class NoNotesFound(Exception):
     pass
 
+class TagException(Exception):
+    pass
+
 
 def input_error(func):
     @wraps(func)
@@ -52,6 +55,8 @@ def input_error(func):
             return ERROR_MESSAGES["no_contact"]
         except NoNotesFound:
             return ERROR_MESSAGES["no-notes"]
+        except TagException:
+            return ERROR_MESSAGES["no-tags"]
         except PhoneException as e:
             return e
         except BirthdayException as e:

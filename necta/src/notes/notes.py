@@ -48,3 +48,14 @@ class Notes(UserList):
                 current_note = note
         self.data.remove(current_note)
         return current_note
+
+    def find_note_by_tag(self, tag:str)-> list:
+        notes=[]
+        for note in self.data:
+            for current_tag in note.tags:
+                if tag in current_tag.value:
+                    notes.append(note)
+                    break
+        
+        return notes
+
