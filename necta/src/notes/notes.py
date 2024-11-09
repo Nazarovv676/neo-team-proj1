@@ -1,5 +1,8 @@
+from necta.src.constants import ERROR_MESSAGES
+from necta.src.exceptions import NoteException
 from .note import Note
 from collections import UserList
+from fuzzywuzzy import fuzz
 
 
 class Notes(UserList):
@@ -15,12 +18,16 @@ class Notes(UserList):
             self._id += 1
             self.data.append(note)
 
-    def edit_note(self, current_note: Note) -> bool:
+    def edit_note(self, current_note: Note):
         counter = 0
         for note in self.data:
             if note.id.value == current_note.id.value:
                 break
             counter += 1
+        
+        if counter == len(self.data):
+            raise NoteException(ERROR_MESSAGES["note_not_found"])
+        
         self.data[counter] = current_note
 
     def find_note(self, name: str) -> list:
@@ -58,4 +65,15 @@ class Notes(UserList):
                     break
         
         return notes
-
+    
+    def search(self, query: str, threshold: int = 60) -> list:
+        """Searches for notes by a given query. Checks name and description."""
+        results = []
+        for note in self.data:
+            if fuzz.partial_ratio(query, note.name.value) >= threshold:
+                results.append(note)
+            elif fuzz.partial_ratio(query, note.description) >= threshold:
+                results.append(note)
+        return results
+    
+    
