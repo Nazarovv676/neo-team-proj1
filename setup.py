@@ -14,7 +14,8 @@ setup(
         "colorama",
         "prompt_toolkit",
         "tabulate",
-        "wcwidth"
+        "wcwidth",
+        "fuzzywuzzy",
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
