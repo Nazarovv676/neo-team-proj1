@@ -1,8 +1,8 @@
 from datetime import datetime
-from src import EmailException, ERROR_MESSAGES
+from necta.src import EmailException, ERROR_MESSAGES
 import re
 
-from src.fields.field import Field
+from necta.src.fields.field import Field
 
 class Email(Field):
     """

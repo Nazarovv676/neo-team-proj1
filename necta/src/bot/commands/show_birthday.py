@@ -1,10 +1,10 @@
 from tabulate import tabulate
-from src import (
+from necta.src import (
     MESSAGES,
     input_error,
     NoContactFound,
 )
-from src.contacts import AddressBook
+from necta.src.contacts import AddressBook
 from colorama import Fore
 
 

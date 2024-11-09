@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="necta",
-    version="1.0.0",
+    version="1.1.6",
     author="Ivan Nazarov",
     author_email="nazarovv676@gmail.com",
     description="This is a bot for saving, changing, and reviewing phone contacts and notes. The bot supports various commands to manage contacts and notes efficiently.",
@@ -22,4 +22,12 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.10",
+    entry_points={
+        'console_scripts': [
+            'necta=necta.main:main',
+        ],
+    },
+    package_data={
+        '': ['*.py', '*.txt', '*.md'],  # Include all necessary file types
+    }
 )

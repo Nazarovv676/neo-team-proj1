@@ -1,11 +1,11 @@
-from src import (
+from necta.src import (
     MESSAGES,
     input_error,
     NoContactFound,
     BirthdayException,
     ERROR_MESSAGES,
 )
-from src.contacts import AddressBook
+from necta.src.contacts import AddressBook
 
 
 @input_error

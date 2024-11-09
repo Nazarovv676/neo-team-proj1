@@ -1,9 +1,9 @@
-from src import NameException, ERROR_MESSAGES
-from src import (
+from necta.src import NameException, ERROR_MESSAGES
+from necta.src import (
     MESSAGES,
     input_error,
 )
-from src.contacts import AddressBook, Record
+from necta.src.contacts import AddressBook, Record
 
 
 @input_error

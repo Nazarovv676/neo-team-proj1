@@ -1,5 +1,5 @@
-from src.constants import MESSAGES, ERROR_MESSAGES
-from src.contacts import Record
+from necta.src.constants import MESSAGES, ERROR_MESSAGES
+from necta.src.contacts import Record
 from tabulate import tabulate
 
 

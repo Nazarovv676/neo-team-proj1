@@ -1,11 +1,11 @@
-from src.exceptions import NotesInputException
-from src.bot.commands.notes_table import notes_table
-from src import (
+from necta.src.exceptions import NotesInputException
+from necta.src.bot.commands.notes_table import notes_table
+from necta.src import (
     MESSAGES,
     input_error,
     NoNotesFound
 )
-from src.notes import Notes
+from necta.src.notes import Notes
 
 
 @input_error

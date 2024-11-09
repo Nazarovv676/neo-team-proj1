@@ -1,11 +1,11 @@
 from tabulate import tabulate
-from src.exceptions import NotesInputException
-from src import (
+from necta.src import (
     MESSAGES,
     input_error,
     NoNotesFound,
 )
-from src.notes import Notes
+from necta.src.exceptions import NotesInputException
+from necta.src.notes import Notes
 
 
 @input_error

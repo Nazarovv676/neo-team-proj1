@@ -1,5 +1,5 @@
-from src.fields.field import Field
-from src import PhoneException, ERROR_MESSAGES
+from necta.src.fields.field import Field
+from necta.src import PhoneException, ERROR_MESSAGES
 import re
 
 

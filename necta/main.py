@@ -1,7 +1,7 @@
-from src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand, save_data, load_data
-from src.contacts import AddressBook
-from src.autocomplete import prompt_input, Commands
-from src.bot import (
+from necta.src import MENU, ERROR_MESSAGES, MESSAGES, InvalidCommand, save_data, load_data
+from necta.src.contacts import AddressBook
+from necta.src.autocomplete import prompt_input, Commands
+from necta.src.bot import (
     parse_input,
     add_contact,
     change_contact,
@@ -22,7 +22,7 @@ from src.bot import (
     add_tag,
     find_by_tag
 )
-from src.notes import Notes
+from necta.src.notes import Notes
 
 ADDRESS_BOOK_FILEPATH = "addressbook.pkl"
 NOTEBOOK_FILEPATH = "notebook.pkl"

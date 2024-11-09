@@ -1,11 +1,11 @@
-from src import (
+from necta.src import (
     MESSAGES,
     ERROR_MESSAGES,
     input_error,
     NoContactFound,
     NameException,
 )
-from src.contacts import AddressBook
+from necta.src.contacts import AddressBook
 
 @input_error
 def delete_contact(args: list, book: AddressBook) -> str:
