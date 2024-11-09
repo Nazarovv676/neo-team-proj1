@@ -9,24 +9,24 @@ Commands menu:
 #4 -{Fore.RED} close {Fore.RESET}/{Fore.RED} exit {Fore.RESET} Exit the Bot
 
 {Fore.CYAN}---Contacts---{Fore.RESET}
-#5 -{Fore.BLUE} add <name> <phone> {Fore.RESET} Add new contact
-#6 -{Fore.BLUE} add-phone <name> <phone> {Fore.RESET} Add phone to contact
-#7 -{Fore.GREEN} change <name> <phone to change> <new phone> {Fore.RESET} Change contact
-#8 -{Fore.YELLOW} phone <name> {Fore.RESET} Show phone of the contact
-#9 -{Fore.BLUE} add-birthday <name> <birthday date> {Fore.RESET} Add birthday, format DD.MM.YYYY
-#10 -{Fore.YELLOW} show-birthday <name> {Fore.RESET} Show birthday of the contact
+#5 -{Fore.GREEN} add <name> <phone> {Fore.RESET} Add new contact
+#6 -{Fore.GREEN} add-phone <name> <phone> {Fore.RESET} Add phone to contact
+#7 -{Fore.YELLOW} change <name> <phone to change> <new phone> {Fore.RESET} Change contact
+#8 -{Fore.WHITE} phone <name> {Fore.RESET} Show phone of the contact
+#9 -{Fore.GREEN} add-birthday <name> <birthday date> {Fore.RESET} Add birthday, format DD.MM.YYYY
+#10 -{Fore.WHITE} show-birthday <name> {Fore.RESET} Show birthday of the contact
 #11 -{Fore.WHITE} birthdays <days> {Fore.RESET} Show upcoming birthday for given days (default 7)
-#12 -{Fore.BLUE} add-address <name> <address> {Fore.RESET} Add address
-#13 -{Fore.BLUE} add-email <name> <email> {Fore.RESET} Add email
+#12 -{Fore.GREEN} add-address <name> <address> {Fore.RESET} Add address
+#13 -{Fore.GREEN} add-email <name> <email> {Fore.RESET} Add email
 #14 -{Fore.RED} delete-contact <name> {Fore.RESET} Delete contact
 #15 -{Fore.WHITE} all {Fore.RESET} Show all contacts
 
 {Fore.CYAN}---Notes---{Fore.RESET}
-#16 -{Fore.BLUE} add-note <name> <description> {Fore.RESET} Add the note
+#16 -{Fore.GREEN} add-note <name> <description> {Fore.RESET} Add the note
 #17 -{Fore.WHITE} show-notes {Fore.RESET} Show all notes
-#18 -{Fore.YELLOW} show-note <name> {Fore.RESET} Show all notes for the contact
-#19 -{Fore.RED} delete-note <name> {Fore.RESET} Delete note with id
-#20 -{Fore.GREEN} edit-note <name> <new description> {Fore.RESET} Edit note with id
+#18 -{Fore.WHITE} show-note <name> {Fore.RESET} Show all notes for the contact
+#19 -{Fore.RED} delete-note <id> {Fore.RESET} Delete note with id
+#20 -{Fore.YELLOW} edit-note <id> <new description> {Fore.RESET} Edit note with id
 #21 -{Fore.BLUE} add-note-tag <name> <tag> {Fore.RESET} Add tag to the note
 #22 -{Fore.YELLOW} find-notes-by-tag <tag> {Fore.RESET} Find notes by a special tag
 """
