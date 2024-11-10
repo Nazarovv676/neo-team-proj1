@@ -2,8 +2,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Bot",
+            "name": "Bot Debug",
             "type": "debugpy",
+            "request": "launch",
+            "program": "necta/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "Bot",
+            "type": "python",
             "request": "launch",
             "program": "necta/main.py",
             "console": "integratedTerminal",
