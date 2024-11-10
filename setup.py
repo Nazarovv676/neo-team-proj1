@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="necta",
-    version="1.1.6",
+    version="1.2.1",
     author="Ivan Nazarov",
     author_email="nazarovv676@gmail.com",
     description="This is a bot for saving, changing, and reviewing phone contacts and notes. The bot supports various commands to manage contacts and notes efficiently.",

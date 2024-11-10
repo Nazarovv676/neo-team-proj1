@@ -1,5 +1,5 @@
 from necta.src.exceptions import NotesInputException
-from src import (
+from necta.src import (
     input_error,
     NoNotesFound,
 
