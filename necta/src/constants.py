@@ -49,8 +49,9 @@ ERROR_MESSAGES = {
     "name_and_email_missing": f"{Fore.RED}Give me name and email please.",
     "name_missing": f"{Fore.RED}Give me name please.",
     "name_and_phone_missing": f"{Fore.RED}Give me name and phone please.",
+    "invalid_input_id_value": f"{Fore.RED}Id must be an integer.",
     "no-tags": f"{Fore.RED}This tag exists!",
-    "notes-input-exception": f"{Fore.RED}Name and tag are required!"
+    "notes-input-exception": f"{Fore.RED}Name and tag are required!",
 }
 
 MESSAGES = {
@@ -75,4 +76,6 @@ MESSAGES = {
     "email_added": f"{Fore.GREEN}Email added.",
     "address_added": f"{Fore.GREEN}Address added.",
     "tag_is_added": f"{Fore.GREEN}Tag is added.",
+    "clarify_contact": f"{Fore.BLUE}What contact do you mean?{Fore.RESET}",
+    "enter_contact_id": f"{Fore.GREEN}Enter the appropriate contact number or {Fore.RED}cancel{Fore.RESET}:",
 }

@@ -26,7 +26,7 @@ __all__ = [
     "MESSAGES",
     "save_data",
     "load_data",
-    "NoNotesFound"
+    "NoNotesFound",
     "EmailException",
     "AddressException",
     "NameException",

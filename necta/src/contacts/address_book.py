@@ -1,12 +1,13 @@
 from collections import UserList
+from datetime import datetime, timedelta
 from src import RecordNotFound
 from src.contacts import Record
-from datetime import datetime, timedelta
+from .conflicted_records import select_conflicted_record
 
 
 class AddressBook(UserList):
     _id = 0
-    
+
     def add_record(self, user: Record):
         """Adds a new user to the address book"""
         user.add_id(self._id)
@@ -23,10 +24,12 @@ class AddressBook(UserList):
 
     def find(self, name: str) -> Record:
         """Retrieves a user by their name."""
-        for record in self.data:
-            if record.name.value == name:
-                return record
-        return None
+        records = list(filter(lambda record: record.name.value == name, self.data))
+        if not len(records):
+            return None
+        if len(records) == 1:
+            return records[0]
+        return select_conflicted_record(records)
 
     def find_all(self) -> list[Record]:
         """Retrieves all users in the address book."""
@@ -78,11 +81,10 @@ class AddressBook(UserList):
                 )
 
         return upcoming_birthdays
-    
-    def delete_record(self, name:str):
-        '''Deletes a record by name from the address book'''
-        for record in self.data:
-            if record.name.value == name:
-                self.data.remove(record)
-                return
-        raise RecordNotFound()
+
+    def delete_record(self, record: Record):
+        """Deletes a record from the address book"""
+        try:
+           self.data.remove(record)
+        except ValueError:
+            raise RecordNotFound()
