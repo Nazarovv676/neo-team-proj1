@@ -26,6 +26,6 @@ def search(args: list[str], address_book: AddressBook, notebook: Notes) -> str:
     ]
     
     contacts_table = tabulate(contacts_data, headers=["Name", "Phones"], tablefmt="fancy_grid") if len(contacts) > 0 else "No contacts found"
-    notes_table = tabulate(notes_data, headers=["Title", "Text"], tablefmt="fancy_grid") if len(notes) > 0 else "No notes found"
+    notes_table = tabulate(notes_data, headers=["Name", "Description"], tablefmt="fancy_grid") if len(notes) > 0 else "No notes found"
     
     return f"Contacts\n{contacts_table}\n\nNotes\n{notes_table}"
