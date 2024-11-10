@@ -14,6 +14,8 @@ from .show_note import show_note
 from .delete_note import delete_note
 from .edit_note import edit_note
 from .add_phone import add_phone
+from .add_tag import add_tag
+from .find_by_tag import find_by_tag
 
 __all__ = [
     "add_contact",
@@ -31,5 +33,7 @@ __all__ = [
     "show_note",
     "delete_note",
     "edit_note",
-    "add_phone"
+    "add_phone",
+    "add_tag",
+    "find_by_tag",
 ]

@@ -19,6 +19,8 @@ class Commands(Enum):
     SHOW_NOTE = "show-note"
     DELETE_NOTE = "delete-note"
     EDIT_NOTE = "edit-note"
+    ADD_NOTE_TAG="add-note-tag"
+    FIND_NOTE_BY_TAG="find-notes-by-tag"
     DELETE_CONTACT = "delete-contact"
     CLOSE = "close"
     EXIT = "exit"

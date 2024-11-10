@@ -14,7 +14,9 @@ from .commands import (
     show_note,
     delete_note,
     edit_note,
-    add_phone
+    add_phone,
+    find_by_tag,
+    add_tag,
 )
 from .command_parser import parse_input
 
@@ -35,5 +37,7 @@ __all__ = [
     "show_note",
     "delete_note",
     "edit_note",
-    "add_phone"
+    "add_phone",
+    "find_by_tag",
+    "add_tag",
 ]

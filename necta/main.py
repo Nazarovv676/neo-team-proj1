@@ -18,7 +18,9 @@ from src.bot import (
     show_note,
     delete_note,
     edit_note,
-    add_phone
+    add_phone,
+    add_tag,
+    find_by_tag
 )
 from src.notes import Notes
 
@@ -78,6 +80,10 @@ def main():
                     print(show_note(args, notebook))
                 case Commands.DELETE_NOTE.value:
                     print(delete_note(args, notebook))
+                case Commands.ADD_NOTE_TAG.value:
+                    print(add_tag(args, notebook))
+                case Commands.FIND_NOTE_BY_TAG.value:
+                    print(find_by_tag(args, notebook))
                 case Commands.EDIT_NOTE.value:
                     print(edit_note(args, notebook))
                 case Commands.DELETE_CONTACT.value:

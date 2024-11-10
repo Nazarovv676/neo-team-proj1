@@ -19,13 +19,15 @@ Commands menu:
 #12 -{Fore.WHITE} all {Fore.RESET} Show all contacts
 
 {Fore.CYAN}---Notes---{Fore.RESET}
-#13 -{Fore.YELLOW} add-note <name> <description> {Fore.RESET} Add the note
-#14 -{Fore.GREEN} show-notes {Fore.RESET} Show all notes
-#15 -{Fore.LIGHTBLUE_EX} show-note <name> {Fore.RESET} Show all notes for the contact
-#16 -{Fore.BLUE} delete-note <id> {Fore.RESET} Delete note with id
-#17 -{Fore.MAGENTA} edit-note <id> <new description> {Fore.RESET} Edit note with id
+#13 -{Fore.RED} add-note <name> <description> {Fore.RESET} Add the note
+#14 -{Fore.LIGHTRED_EX} show-notes {Fore.RESET} Show all notes
+#15 -{Fore.YELLOW} show-note <name> {Fore.RESET} Show all notes for the contact
+#16 -{Fore.GREEN} delete-note <name> {Fore.RESET} Delete note with id
+#17 -{Fore.LIGHTBLUE_EX} edit-note <name> <new description> {Fore.RESET} Edit note with id
+#18 -{Fore.BLUE} add-note-tag <name> <tag> {Fore.RESET} Add tag to the note
+#19 -{Fore.MAGENTA} find-notes-by-tag <tag> {Fore.RESET} Find notes by a special tag
 
-#18 -{Fore.RED} close {Fore.RESET}/{Fore.RED} exit {Fore.RESET} Exit the Bot
+#20 -{Fore.RED} close {Fore.RESET}/{Fore.RED} exit {Fore.RESET} Exit the Bot
 """
 
 ERROR_MESSAGES = {
@@ -48,6 +50,8 @@ ERROR_MESSAGES = {
     "name_missing": f"{Fore.RED}Give me name please.",
     "name_and_phone_missing": f"{Fore.RED}Give me name and phone please.",
     "invalid_input_id_value": f"{Fore.RED}Id must be an integer.",
+    "no-tags": f"{Fore.RED}This tag exists!",
+    "notes-input-exception": f"{Fore.RED}Name and tag are required!",
 }
 
 MESSAGES = {
@@ -71,6 +75,7 @@ MESSAGES = {
     "note_deleted": f"{Fore.GREEN}Note is deleted",
     "email_added": f"{Fore.GREEN}Email added.",
     "address_added": f"{Fore.GREEN}Address added.",
+    "tag_is_added": f"{Fore.GREEN}Tag is added.",
     "clarify_contact": f"{Fore.BLUE}What contact do you mean?{Fore.RESET}",
     "enter_contact_id": f"{Fore.GREEN}Enter the appropriate contact number or {Fore.RED}cancel{Fore.RESET}:",
 }

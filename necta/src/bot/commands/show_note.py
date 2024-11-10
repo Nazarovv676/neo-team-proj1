@@ -1,4 +1,5 @@
 from tabulate import tabulate
+from src.exceptions import NotesInputException
 from src import (
     MESSAGES,
     input_error,
@@ -9,7 +10,10 @@ from src.notes import Notes
 
 @input_error
 def show_note(args, notebook: Notes) -> str:
-    name, *_ = args
+    try:
+        name, *_ = args
+    except:
+        raise NotesInputException("Name is required!")
 
     notes = notebook.find_note(name)
 
@@ -17,8 +21,9 @@ def show_note(args, notebook: Notes) -> str:
         raise NoNotesFound()
 
     table_data = [
-        (note.id.value, note.name.value, note.description)
+        (note.name.value, note.description, str.join(
+            "\n", map(lambda tag: tag.value, note.tags)))
         for note in notes
     ]
 
-    return tabulate(table_data, headers=["Id", "Name", "Note"], tablefmt="grid")
+    return tabulate(table_data, headers=["Name", "Note", "Tags"], tablefmt="fancy_grid")

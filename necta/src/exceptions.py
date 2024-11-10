@@ -1,4 +1,5 @@
 from functools import wraps
+from colorama import Fore
 from src.constants import ERROR_MESSAGES
 
 
@@ -36,6 +37,12 @@ class NoContactFound(Exception):
 class NoNotesFound(Exception):
     pass
 
+class TagException(Exception):
+    pass
+
+class NotesInputException(Exception):
+    pass
+
 
 def input_error(func):
     @wraps(func)
@@ -52,6 +59,10 @@ def input_error(func):
             return ERROR_MESSAGES["no_contact"]
         except NoNotesFound:
             return ERROR_MESSAGES["no-notes"]
+        except NotesInputException as e:
+            return  f"{Fore.RED}{e}"
+        except TagException as e:
+            return f"{Fore.RED}{e}"
         except PhoneException as e:
             return e
         except BirthdayException as e:

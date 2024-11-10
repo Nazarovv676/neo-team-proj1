@@ -10,6 +10,7 @@ from .exceptions import (
     EmailException,
     AddressException,
     NameException,
+    TagException
 )
 from .data_storage import save_data, load_data
 
@@ -29,4 +30,5 @@ __all__ = [
     "EmailException",
     "AddressException",
     "NameException",
+    "TagException"
 ]

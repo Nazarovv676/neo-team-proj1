@@ -1,3 +1,5 @@
+from src.exceptions import NotesInputException
+from src.bot.commands.notes_table import notes_table
 from src import (
     MESSAGES,
     input_error,
@@ -9,9 +11,14 @@ from src.notes import Notes
 @input_error
 def delete_note(args, notebook: Notes):
     message = MESSAGES["note_deleted"]
-    id, *_ = args
+    try:
+        name, *_ = args
+    except:
+        raise NotesInputException("Name is required!")
 
-    deleted_note = notebook.delete(int(id))
+    note = notes_table(name, notebook)
+
+    deleted_note = notebook.delete(note.id.value)
 
     if delete_note is None:
         raise NoNotesFound()
