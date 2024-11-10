@@ -17,4 +17,4 @@ def show_notes(notebook: Notes) -> str:
         for note in notes
     ]
 
-    return tabulate(table_data, headers=["Name", "Note"], tablefmt="grid")
+    return tabulate(table_data, headers=["Name", "Note"], tablefmt="fancy_grid")

@@ -50,6 +50,7 @@ ERROR_MESSAGES = {
     "name_missing": f"{Fore.RED}Give me name please.",
     "name_and_phone_missing": f"{Fore.RED}Give me name and phone please.",
     "no-tags": f"{Fore.RED}This tag exists!",
+    "notes-input-exception": f"{Fore.RED}Name and tag are required!"
 }
 
 MESSAGES = {

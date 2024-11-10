@@ -35,5 +35,5 @@ __all__ = [
     "edit_note",
     "add_phone",
     "add_tag",
-    "find_by_tag"
+    "find_by_tag",
 ]

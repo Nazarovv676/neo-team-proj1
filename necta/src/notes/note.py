@@ -22,5 +22,5 @@ description: {Fore.BLUE}{self.description}{Fore.RESET}"""
     
     def set_tag(self, tag: str):
         if tag in [tag.value for tag in self.tags]:
-            raise TagException()
+            raise TagException("This tag exists!")
         self.tags.append(Tag(tag))
