@@ -1,8 +1,8 @@
-from src import TagException
-from src.contacts import Name
-from src.fields.id import Id
-from src.notes.fields.keyword import Keyword
-from src.notes.fields.tag import Tag
+from necta.src.contacts import Name
+from necta.src.exceptions import TagException
+from necta.src.fields.id import Id
+from necta.src.notes.fields.keyword import Keyword
+from necta.src.notes.fields.tag import Tag
 from colorama import Fore
 
 

@@ -1,8 +1,9 @@
 from collections import UserList
+from necta.src import RecordNotFound
+from necta.src.contacts import Record
 from datetime import datetime, timedelta
-from src import RecordNotFound
-from src.contacts import Record
-from .conflicted_records import select_conflicted_record
+
+from necta.src.contacts.conflicted_records import select_conflicted_record
 
 
 class AddressBook(UserList):

@@ -1,11 +1,11 @@
-from src import (
+from necta.src import (
     MESSAGES,
     ERROR_MESSAGES,
     input_error,
     NoContactFound,
     EmailException,
 )
-from src.contacts import AddressBook
+from necta.src.contacts import AddressBook
 
 @input_error
 def add_email(args: list, book: AddressBook) -> str:

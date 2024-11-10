@@ -1,4 +1,4 @@
-from src.fields.field import Field
+from necta.src.fields.field import Field
 
 
 class Name(Field):

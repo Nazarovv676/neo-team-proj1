@@ -1,6 +1,7 @@
 from functools import wraps
+
 from colorama import Fore
-from src.constants import ERROR_MESSAGES
+from .constants import ERROR_MESSAGES
 
 
 class PhoneException(Exception):

@@ -1,4 +1,4 @@
-from src.exceptions import input_error
+from necta.src.exceptions import input_error
 
 
 @input_error

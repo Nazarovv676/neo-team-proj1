@@ -1,7 +1,7 @@
-from src.contacts import Name, Phone, Birthday, Email, Address
-from src import PhoneException, ERROR_MESSAGES
+from necta.src.contacts import Name, Phone, Birthday, Email, Address
+from necta.src import PhoneException, ERROR_MESSAGES
 from colorama import Fore
-from src.fields.id import Id
+from necta.src.fields.id import Id
 
 
 class Record:

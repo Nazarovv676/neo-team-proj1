@@ -1,6 +1,6 @@
-from src.contacts import AddressBook
-from src.exceptions import input_error, PhoneException, NoContactFound
-from src.constants import MESSAGES, ERROR_MESSAGES
+from necta.src.contacts import AddressBook
+from necta.src.exceptions import PhoneException, NoContactFound, input_error
+from necta.src.constants import MESSAGES, ERROR_MESSAGES
 
 @input_error
 def add_phone(args: list, book: AddressBook) -> str:

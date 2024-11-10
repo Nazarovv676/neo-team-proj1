@@ -1,6 +1,6 @@
 from datetime import datetime
-from src import ERROR_MESSAGES, BirthdayException
-from src.fields.field import Field
+from necta.src import ERROR_MESSAGES, BirthdayException
+from necta.src.fields.field import Field
 
 
 class Birthday(Field):

@@ -1,7 +1,7 @@
-from src.notes.notes import Notes
-from src.notes.note import Note
-from src.exceptions import NoNotesFound
-from src.autocomplete import prompt_input
+from necta.src.notes.notes import Notes
+from necta.src.notes.note import Note
+from necta.src.exceptions import NoNotesFound
+from necta.src.autocomplete import prompt_input
 from tabulate import tabulate
 
 
