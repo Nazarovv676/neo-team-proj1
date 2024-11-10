@@ -4,30 +4,31 @@ MENU = f"""{Fore.RESET}
 Commands menu:
 
 #1 -{Fore.LIGHTBLACK_EX} hello {Fore.RESET} Say hello to the Bot
+#2 -{Fore.LIGHTBLACK_EX} menu {Fore.RESET} Show the menu
+#3 -{Fore.LIGHTBLACK_EX} search <query> {Fore.RESET} Search for contacts and notes
+#4 -{Fore.RED} close {Fore.RESET}/{Fore.RED} exit {Fore.RESET} Exit the Bot
 
 {Fore.CYAN}---Contacts---{Fore.RESET}
-#2 -{Fore.BLUE} add <name> <phone> {Fore.RESET} Add new contact
-#3 -{Fore.BLUE} add-phone <name> <phone> {Fore.RESET} Add phone to contact
-#4 -{Fore.GREEN} change <name> <phone to change> <new phone> {Fore.RESET} Change contact
-#5 -{Fore.YELLOW} phone <name> {Fore.RESET} Show phone of the contact
-#6 -{Fore.BLUE} add-birthday <name> <birthday date> {Fore.RESET} Add birthday, format DD.MM.YYYY
-#7 -{Fore.YELLOW} show-birthday <name> {Fore.RESET} Show birthday of the contact
-#8 -{Fore.WHITE} birthdays <days> {Fore.RESET} Show upcoming birthday for given days (default 7)
-#9 -{Fore.BLUE} add-address <name> <address> {Fore.RESET} Add address
-#10 -{Fore.BLUE} add-email <name> <email> {Fore.RESET} Add email
-#11 -{Fore.RED} delete-contact <name> {Fore.RESET} Delete contact
-#12 -{Fore.WHITE} all {Fore.RESET} Show all contacts
+#5 -{Fore.GREEN} add <name> <phone> {Fore.RESET} Add new contact
+#6 -{Fore.GREEN} add-phone <name> <phone> {Fore.RESET} Add phone to contact
+#7 -{Fore.YELLOW} change <name> <phone to change> <new phone> {Fore.RESET} Change contact
+#8 -{Fore.WHITE} phone <name> {Fore.RESET} Show phone of the contact
+#9 -{Fore.GREEN} add-birthday <name> <birthday date> {Fore.RESET} Add birthday, format DD.MM.YYYY
+#10 -{Fore.WHITE} show-birthday <name> {Fore.RESET} Show birthday of the contact
+#11 -{Fore.WHITE} birthdays <days> {Fore.RESET} Show upcoming birthday for given days (default 7)
+#12 -{Fore.GREEN} add-address <name> <address> {Fore.RESET} Add address
+#13 -{Fore.GREEN} add-email <name> <email> {Fore.RESET} Add email
+#14 -{Fore.RED} delete-contact <name> {Fore.RESET} Delete contact
+#15 -{Fore.WHITE} all {Fore.RESET} Show all contacts
 
 {Fore.CYAN}---Notes---{Fore.RESET}
-#13 -{Fore.RED} add-note <name> <description> {Fore.RESET} Add the note
-#14 -{Fore.LIGHTRED_EX} show-notes {Fore.RESET} Show all notes
-#15 -{Fore.YELLOW} show-note <name> {Fore.RESET} Show all notes for the contact
-#16 -{Fore.GREEN} delete-note <name> {Fore.RESET} Delete note with id
-#17 -{Fore.LIGHTBLUE_EX} edit-note <name> <new description> {Fore.RESET} Edit note with id
-#18 -{Fore.BLUE} add-note-tag <name> <tag> {Fore.RESET} Add tag to the note
-#19 -{Fore.MAGENTA} find-notes-by-tag <tag> {Fore.RESET} Find notes by a special tag
-
-#20 -{Fore.RED} close {Fore.RESET}/{Fore.RED} exit {Fore.RESET} Exit the Bot
+#16 -{Fore.GREEN} add-note <name> <description> {Fore.RESET} Add the note
+#17 -{Fore.WHITE} show-notes {Fore.RESET} Show all notes
+#18 -{Fore.WHITE} show-note <name> {Fore.RESET} Show all notes for the contact
+#19 -{Fore.RED} delete-note <name> {Fore.RESET} Delete note with name
+#20 -{Fore.YELLOW} edit-note <name> <new description> {Fore.RESET} Edit note with name
+#21 -{Fore.BLUE} add-note-tag <name> <tag> {Fore.RESET} Add tag to the note
+#22 -{Fore.YELLOW} find-notes-by-tag <tag> {Fore.RESET} Find notes by a special tag
 """
 
 ERROR_MESSAGES = {
@@ -52,6 +53,8 @@ ERROR_MESSAGES = {
     "invalid_input_id_value": f"{Fore.RED}Id must be an integer.",
     "no-tags": f"{Fore.RED}This tag exists!",
     "notes-input-exception": f"{Fore.RED}Name and tag are required!",
+    "note_not_found": f"{Fore.RED}Note not found.",
+    "search_query_missing": f"{Fore.RED}Give me a query to search.",
 }
 
 MESSAGES = {

@@ -20,7 +20,8 @@ from necta.src.bot import (
     edit_note,
     add_phone,
     add_tag,
-    find_by_tag
+    find_by_tag,
+    search
 )
 from necta.src.notes import Notes
 
@@ -48,6 +49,8 @@ def main():
                 break
 
             match command:
+                case Commands.SEARCH.value:
+                    print(search(args, book, notebook))
                 case Commands.HELLO.value:
                     print(MESSAGES["help_question"])
                 case Commands.MENU.value:

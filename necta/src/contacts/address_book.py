@@ -2,6 +2,7 @@ from collections import UserList
 from necta.src import RecordNotFound
 from necta.src.contacts import Record
 from datetime import datetime, timedelta
+from fuzzywuzzy import fuzz
 
 from necta.src.contacts.conflicted_records import select_conflicted_record
 
@@ -89,3 +90,20 @@ class AddressBook(UserList):
            self.data.remove(record)
         except ValueError:
             raise RecordNotFound()
+
+    def search(self, query: str, threshold: int = 60) -> list[Record]:
+        '''Searches for a record by name or phone number using fuzzy matching.'''
+        results = []
+        for record in self.data:
+            # Fuzzy match on name
+            if fuzz.partial_ratio(query.lower(), record.name.value.lower()) >= threshold:
+                results.append(record)
+                continue  # Avoid duplicate entry if a match is found on name
+
+            # Fuzzy match on each phone number
+            for phone in record.phones:
+                if fuzz.partial_ratio(query, phone.value) >= threshold:
+                    results.append(record)
+                    break  # Stop further checking if we already matched this record
+
+        return results

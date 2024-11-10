@@ -2,6 +2,7 @@ from enum import Enum
 
 
 class Commands(Enum):
+    SEARCH = "search"
     HELLO = "hello"
     MENU = "menu"
     ADD_CONTACT = "add"

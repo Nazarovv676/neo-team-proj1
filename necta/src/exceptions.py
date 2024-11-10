@@ -45,6 +45,14 @@ class NotesInputException(Exception):
     pass
 
 
+class NoteException(Exception):
+    pass
+
+
+class SearchException(Exception):
+    pass
+
+
 def input_error(func):
     @wraps(func)
     def inner(*args, **kwargs):
@@ -75,6 +83,10 @@ def input_error(func):
         except AddressException as e:
             return e
         except NameException as e:
+            return e
+        except NoteException as e:
+            return e
+        except SearchException as e:
             return e
             
 

@@ -10,6 +10,7 @@ def prompt_input() -> str:
 
     completer = NestedCompleter.from_nested_dict(
         {
+            Commands.SEARCH.value: {"<query>": None},
             Commands.HELLO.value: None,
             Commands.ADD_CONTACT.value: {"<name> <phone>": None},
             Commands.ADD_PHONE.value: {"<name> <phone>": None},
