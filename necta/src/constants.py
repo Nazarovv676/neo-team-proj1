@@ -22,8 +22,8 @@ Commands menu:
 #13 -{Fore.RED} add-note <name> <description> {Fore.RESET} Add the note
 #14 -{Fore.LIGHTRED_EX} show-notes {Fore.RESET} Show all notes
 #15 -{Fore.YELLOW} show-note <name> {Fore.RESET} Show all notes for the contact
-#16 -{Fore.GREEN} delete-note <id> {Fore.RESET} Delete note with id
-#17 -{Fore.LIGHTBLUE_EX} edit-note <id> <new description> {Fore.RESET} Edit note with id
+#16 -{Fore.GREEN} delete-note <name> {Fore.RESET} Delete note with id
+#17 -{Fore.LIGHTBLUE_EX} edit-note <name> <new description> {Fore.RESET} Edit note with id
 #18 -{Fore.BLUE} add-note-tag <name> <tag> {Fore.RESET} Add tag to the note
 #19 -{Fore.MAGENTA} find-notes-by-tag <tag> {Fore.RESET} Find notes by a special tag
 
