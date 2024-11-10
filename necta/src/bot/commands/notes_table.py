@@ -20,8 +20,7 @@ def notes_table(name: str, notebook: Notes) -> Note:
         print(f"Found more than one note with name: '{name}'")
         print(tabulate(table_data, headers=[
               "Id", "Name", "Note", "Tags"], tablefmt="fancy_grid"))
-        print("Enter note ID")
-        note_id = int(prompt_input())
+        note_id = int(input("Enter note ID: "))
         current_note = notebook.find_note_with_id(note_id)
         if not current_note:
             raise NoNotesFound()
