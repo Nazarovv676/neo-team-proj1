@@ -32,6 +32,8 @@ def add_tag(args, notebook: Notes):
         current_note = notebook.find_note_with_id(note_id)
         if not current_note:
             raise NoNotesFound()
+        if not current_note in notes:
+            raise NoNotesFound()
     else:
         current_note = notes[0]
 
