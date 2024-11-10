@@ -82,10 +82,9 @@ class AddressBook(UserList):
 
         return upcoming_birthdays
 
-    def delete_record(self, name: str):
-        """Deletes a record by name from the address book"""
-        for record in self.data:
-            if record.name.value == name:
-                self.data.remove(record)
-                return
-        raise RecordNotFound()
+    def delete_record(self, record: Record):
+        """Deletes a record from the address book"""
+        try:
+           self.data.remove(record)
+        except ValueError:
+            raise RecordNotFound()
